@@ -3,7 +3,7 @@ cask "devproxy" do
   name "devproxy"
   desc "Local development reverse proxy with automatic TLS and Docker integration"
   homepage "https://github.com/munichmade/devproxy"
-  version "0.2.2"
+  version "0.2.3"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "devproxy" do
     on_intel do
       url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-amd64.tar.gz",
         verified: "github.com/munichmade/devproxy"
-      sha256 "3619321a765b283838e3f39ef927bae815be4c3d81ab6484ca690bcdf8d1fc16"
+      sha256 "1a53dbbef14b3c22127aa4fe9642978e27ef1549b522dd97d227c4756d858629"
     end
     on_arm do
       url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-arm64.tar.gz",
         verified: "github.com/munichmade/devproxy"
-      sha256 "93dcb845f9260dd1a2d82ae63a4242af7559dedb9e5d56be596c71ed2b4e64f5"
+      sha256 "1c79416947b4b4d27371ecbc98e37fd905c002b0fa9ce3bab19f73f0fa6ded1e"
     end
   end
 
@@ -28,12 +28,12 @@ cask "devproxy" do
     on_intel do
       url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-amd64.tar.gz",
         verified: "github.com/munichmade/devproxy"
-      sha256 "e2d82635bd2b1e9c8e9b2670f9d542b1e141233bfb8922f7e55b9a8f393426c3"
+      sha256 "62436391132352284772373a9558bf58da76500baa8277d005f39bae43f2ef2a"
     end
     on_arm do
       url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-arm64.tar.gz",
         verified: "github.com/munichmade/devproxy"
-      sha256 "ee3d7e2a747c1f98281516afdfe14a5ee249f19f4f0ebc302af6fc09f1192bc1"
+      sha256 "821e5a7125520c5d3c64111975b180dce4911a5fbd6445adce8cf2ad7e45eeb2"
     end
   end
 
