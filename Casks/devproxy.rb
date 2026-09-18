@@ -5,25 +5,21 @@ cask "devproxy" do
   on_macos do
     on_arm do
       sha256 "cf19b76453a130c71adb5ed4fb5c5dffd227fe00e22c29a7ffec4f336e81f84d"
-      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-arm64.tar.gz",
-        verified: "github.com/munichmade/devproxy"
+      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-arm64.tar.gz"
     end
     on_intel do
       sha256 "0542cb57da403a4dc989f2851a407669f11e66861d35f02106f2f2234ebcb12c"
-      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-amd64.tar.gz",
-        verified: "github.com/munichmade/devproxy"
+      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-darwin-amd64.tar.gz"
     end
   end
   on_linux do
     on_arm do
       sha256 "30354f87e53708a428a32c4d85108f51d6f76ca17e54dd6bcf4d2481a778bcbb"
-      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-arm64.tar.gz",
-        verified: "github.com/munichmade/devproxy"
+      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-arm64.tar.gz"
     end
     on_intel do
       sha256 "373139e1e6cf8339b2575a4c8f06b0e5a861c5a21337e2d3cb01c2105b400016"
-      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-amd64.tar.gz",
-        verified: "github.com/munichmade/devproxy"
+      url "https://github.com/munichmade/devproxy/releases/download/v#{version}/devproxy-#{version}-linux-amd64.tar.gz"
     end
   end
 
@@ -37,7 +33,7 @@ cask "devproxy" do
 
   binary "devproxy"
 
-  postflight do
+  postflight_steps do
     if OS.mac?
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/devproxy"]
     end
